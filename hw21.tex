@@ -1,0 +1,241 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%DOCUMENT SETTINGS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,epsfig}
+
+\evensidemargin 0in
+\oddsidemargin 0in
+\topmargin -.3in
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.5in}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}{\underline}
+\newcommand{\vs}{\vspace{3mm}}
+\newcommand{\cF}{{\mathcal F}}
+
+\newcounter{inner}
+
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\bx}[1]{\makebox(8,5.5)[c]{#1}}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{claim}{Claim}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%HEADER
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\hrule
+\vskip .2in
+\centerline{\bf \Large 21-127-T: Concepts of Mathematics}
+\centerline{\bf Homework 2}
+{\bf Due date: 5/30/2015, 11:00 PM}
+\vskip .2in
+\hrule
+\end{center}
+\thispagestyle{empty}
+{\bf \noindent Name:Dina Yerlan \newline Collaborators:0}
+\vspace {0.2in}
+\hrule
+\vspace {0.2in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%HOMEWORK BODY
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 1}
+
+Do problem 4, parts (a)-(c) from section 1.6. Note that the statement $v$ is easier to understand if written as
+\[
+v\equiv\{\exists M,K\in\mathbb{R}\text{ s.t. }\forall x\in\mathbb{R}, f(x)>M\}
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #1: Part a
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part a - Answer:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #1: Part b
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part b - Answer:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #1: Part c
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part c - Answer:}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 2}
+
+Do problem 2, parts (d)-(f) from section 1.6. Note that the statement $v$ is easier to understand if written as
+\[
+v\equiv\{\exists M,K\in\mathbb{R}\text{ s.t. }\forall x\in\mathbb{R}, f(x)>M\}
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #2: Part d
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part d - Answer:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #2: Part e
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part e - Answer:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #2: Part f
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part f - Answer:}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 3}
+
+Prove the following claim:
+\begin{claim}
+There exists no largest real number.
+\end{claim}
+
+{\noindent\bf Answer:}
+{
+ \newline
+ \newline
+Claim: There exists no largest real number\newline
+ \newline
+Given(negation of the claim):  $\{\exists M\in R\text{ s.t. } \forall x\in R\ M>x \}$\newline
+ \newline
+Proof: By contradiction assume there exists the largest real number\newline
+ \newline
+Choose $M_{0}\in R$ s.t $\forall x\in R$ $M_{0}>x$\newline
+ \newline
+Let $x=M_{0}+1$\newline
+ \newline
+Then, $M_{0}>M_{0}+1$\newline
+ \newline
+Witness that $M_{0}>M_{0}+1$ cannot be true\newline
+ \newline
+Thus our assumption was wrong\newline
+}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 4}
+
+Suppose $D$ is some set and $P(x)$ is a predicate function. Mathematicians will often write claims of the form:\\
+
+{\it\noindent There exists a unique (meaning there's one and ONLY one) element of a given set, $D$, satisfying a given property, $P(x)$.}\\
+
+\noindent To denote the phrase ``there exists a unique element'' we use - the fake, but still useful for shorthand - quantifier ``$\exists !$''. For example, if D is a set and P(x) is a predicate function we would write the statement ``there exists a unique element of D s.t. P(x) is true'' as
+\[
+\{\exists ! x\in D\text{ s.t. }P(x)\}
+\]
+To prove the statement above we {\it usually} proceed as follows:
+\begin{enumerate}
+  \item Find/build a specific $x_{0}\in D$ s.t. $P(x_{0})$ is true, i.e. we prove the statement
+    \[
+    \exists x\in D\text{ s.t. }P(x)
+    \]
+    Remember that once we find/build a candidate $x_{0}$ we must prove that $P(x_{0})$ is true.
+    \item We prove that if an element in D satisfies the property $P(x)$ then it's unique. To do so, we often proceed by contradiction and occasionally will use the $x_{0}$ we defined in the first step.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #4: Part a
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part a}
+Let $D$ be a set, $P(x)$ be a predicate function, and $x_{0}\in D$ s.t. $P(x_{0})$ is true. Write what it means for $x_{0}$ to be the unique element of $D$ satisfying $P(x)$. Also, write the negation of this statement. (HINT: The non-negated statement will involve the quantifier $\forall$).\newline
+
+{\noindent
+Claim: $\{\exists ! x_{0}\in D\text{ s.t. }P(x_{0})\}$\newline
+. \newline
+Meaning: It means that there is one and only one element in D,$x_{0}$ that makes the expression $P(x_{0})$ true\newline
+. \newline
+Negation: $\{\forall  x_{0}\in D,not P(x_{0})\}$\newline
+. \newline
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #4: Part b
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part b}
+
+Using your answer above, write the statement $\{\exists ! x\in D\text{ s.t. }P(x)\}$ using the quantifiers $\forall$ and $\exists$.\newline
+
+{\noindent\bf Answer:}
+{
+$(\exists x,P(x)) \land (\forall y,P(y))$ $\Rightarrow$ $(x=y)$
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #4: Part c
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part c}
+
+Prove the following claim
+\begin{claim}
+If n is an even integer there exists a unique $i\in\mathbb{Z}$ s.t. $n=2i$.
+\end{claim}
+
+{\noindent\bf Answer:}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 5}
+
+Prove the following claim by contraposition:
+\begin{claim}
+Let $n,m,p\in\mathbb{Z}$. If $nmp$ is even then $n$, $m$, or $p$ is even.
+\end{claim}
+
+{\noindent\bf Answer:}
+{\noindent
+Claim(Using quantifiers): $n,m,p\in\mathbb{Z}$ $\{nmp\in E\}$ $\Rightarrow$ $\{n \in E \lor m \in E \lor p \in E\}$ .\newline
+.\newline
+Contraposition: $n,m,p\in\mathbb{Z}$  $\{n \in O \land m \in O \land p \in O\}$ $\Rightarrow$  $\{nmp\in O\}$ \newline
+.\newline
+NTS:  $\exists k \in Z$ s.t $n_{0}m_{0}p_{0}=2k+1 $\newline
+.\newline
+Proof: By contraposition. Choose $n_{0},m_{0},p_{0} \in Z $ \newline
+.\newline
+$\exists a,b,c \in Z$ where $n_{0}=2a+1$, $m_{0}=2b+1$, $p_{0}=2c+1$\newline
+.\newline
+Observe that  $n_{0}m_{0}p_{0}$=$(2a+1)(2b+1)(2c+1)$ \newline
+.\newline
+              $=$ $(4ab+2a+2b+1)(2b+1) $ $=$\newline
+.\newline
+              $=$ $8ab^{2}+8ab+4b^{2}+4b+2a+1$ $=$\newline
+.\newline
+              $=$ $2(4ab^{2}+4ab+2b^{2}+2b+a)+1$\newline
+.\newline
+Let $k=4ab^{2}+4ab+2b^{2}+2b+a $ then $n_{0}m_{0}p_{0}=2k+1$\newline
+.\newline
+We see that $n_{0}m_{0}p_{0}$ is odd, so we proved that $\{n_{0}m_{0}p_{0}\in O\}$\newline
+.\newline
+}
+\end{document}

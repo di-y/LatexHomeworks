@@ -1,0 +1,41 @@
+\documentclass{resume}
+
+ \begin{document}
+ \pagenumbering{gobble} % suppress displaying page number
+
+ \name{Kassian Sun}
+ \basicContactInfo{kassiansun@163.com}{(+86) 135 024 49092}
+
+ \section{Education}
+ \datedsubsection{\textbf{Sun-Yat-Sen University (SYSU)}, Guangzhou, China}{2012 -- Present}
+ \textit{B.S.} in Software Engineering (SE)
+
+ \section{Experience}
+ \datedsubsection{\textbf{Huawei Inc.} Shenzhen, China}{2015.07 -- 2015.09}
+ \role{Summer Intern}{Linux Software Engineer}
+ Linux Kernel Development
+ \begin{itemize}
+   \item Linux kernel maintenance test
+     \item Fixed several bugs for glibc and busybox
+       \item Supply new SSH binary distribution for better security
+       \end{itemize}
+
+       \section{Professional Skills}
+       \begin{itemize}[parsep=0.5ex]
+         \item Keywords: Linux System \& Web Development
+           \item 6-year experience of Linux, knowledge of system development and shell-related(sed, awk)
+             \item Knowledge of Ruby programming \& metaprogramming, network, bundler, rspec and capistrano, etc
+               \item Knowledge of Go backend programming, experience of RESTful server development, knowledge of Docker, Kubernetes, CoreOS
+                 \item Knowledge of Node.js based backend development, experience of real-time WebSocket development
+                   \item Knowledge of web frontend development with CoffeeScript, Jade, SASS and angular.js, d3.js, jQuery
+                     \item Knowledge of MongoDB, PostgreSQL, Redis development
+                     \end{itemize}
+
+                     \section{Miscellaneous}
+                     \begin{itemize}[parsep=0.5ex]
+                       \item Interests in embedded software development, experience of Arduino, STM32 and embedded Linux development
+                         \item GitHub: github.com/kassiansun
+                           \item Languages: English - Fluent, Mandarin - Native speaker
+                           \end{itemize}
+
+                           \end{document}

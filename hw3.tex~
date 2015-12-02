@@ -1,0 +1,259 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%DOCUMENT SETTINGS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,epsfig}
+\usepackage{graphicx}
+\evensidemargin 0in
+\oddsidemargin 0in
+\topmargin -.3in
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.5in}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}{\underline}
+\newcommand{\vs}{\vspace{3mm}}
+\newcommand{\cF}{{\mathcal F}}
+
+\newcounter{inner}
+
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\bx}[1]{\makebox(8,5.5)[c]{#1}}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{claim}{Claim}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%HEADER
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\hrule
+\vskip .2in
+\centerline{\bf \Large 21-127-T: Concepts of Mathematics}
+\centerline{\bf Homework 3}
+{\bf Due date: 6/6/2015, 12:00 PM}
+\vskip .2in
+\hrule
+\end{center}
+\thispagestyle{empty}
+{\bf \noindent Name:Dina Yerlan \newline Collaborators:}
+\vspace {0.2in}
+\hrule
+\vspace {0.2in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%HOMEWORK BODY
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 1}
+
+Do problem 10 from section 4.2 of the course reader.\\
+
+{\noindent\bf Answer:}
+{
+ \newline
+Base case: $n=1+1/3+1/5+7/15=1$, and  $1$ is integer\newline
+\newline
+Inductive step: Choose $k \in Z $ s.t $k^{3}/3+k^{5}/5+7k/15$ is integer\newline
+Observe that $(k+1)^{3}/3+(k+1)^{5}/5+7(k+1)/15=$\newline
+$= k^{5}/5+k^{4}+7k_{3}/3+3k_{2}+2k +7k/15+1=$\newline
+$=k^{5}/5+7(k_{3}/3) +7k/15 +k^{4}+3k_{2}+2k+1=$\newline
+$=k^{5}/5+k_{3}/3 +7k/15 +k^{4}+2k_{3}+3k_{2}+2k+1=$\newline
+We know that $k^{5}/5+k_{3}/3 +7k/15$ is integer\newline
+An we know $k^{4}+2k_{3}+3k_{2}+2k+1$ is also integer because $k \in Z$\newline
+Sum of integers is integer\newline
+Thus $(k+1)^{3}/3+(k+1)^{5}/5+7(k+1)/15$ is integer$\square$
+
+}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 2}
+
+Do problem 14 from section 4.2 of the course reader.\\
+{
+Answer:\newline
+ \newline
+Base Case: When $n=0,\binom{1\quad 1}{0\quad 1}^0=\binom{1\quad 0}{0\quad 1}=\binom{1\quad 0}{0\quad 1}$ is true, because matrix to the zeroth power is identity matrix of the same dimensions\newline
+ \newline
+Inductive Step:\newline
+Choose $k \in Z$ s.t $\binom{1\quad 1}{0\quad 1}^k=\binom{1\quad k}{0\quad 1}$\newline
+Observe that $\binom{1\quad 1}{0\quad 1}^{k+1}=$\newline
+$=\binom{1\quad 1}{0\quad 1}^k\binom{1\quad 1}{0\quad 1}=$\newline
+$=\binom{1\quad k}{0\quad 1}\binom{1\quad 1}{0\quad 1}=$\newline
+$=\binom{1\quad k+1}{0\quad 1}$\newline
+Thus we showed $\binom{1\quad 1}{0\quad 1}^{k+1}=\binom{1\quad k+1}{0\quad 1}$ $\square$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 3}
+
+Define a sequence of numbers via the following rules:
+\begin{align*}
+  a_{0}&=0\\
+  a_{1}&=1\\
+  a_{n+2}&=a_{n+1}+a_{n}
+\end{align*}
+where $n\geq 0$. This is called the Fibonacci sequence.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3: Part a
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part a}
+
+Use induction to show that $a_{n}\leq 2^{n}$ for $n\geq 0$.\newline
+
+{\noindent\bf Answer:}
+{
+ \newline
+Base Case: $a_{2}=1+0 $ $a_{2}=1 \leq 2^{2}=4$ is true\newline
+Induction Hypothesis: Let $n>2,2 \leq i<n, a_{i} \a_{i} \leq 2^{i}$ So if we know that $a_{i} \leq 2^{i}$ then $a_{i-1}+a_{i-2} \leq 2^{i-1}+2^{i-2}$\newline
+Inductive step:\newline
+By strong induction, choose $k$ s.t  $a_{k}\leq 2^{k}$ for $k \geq 0$\newline
+Observe that $a_{k+1}= a_{k} + a_{k-1}< 2^{k}+2^{k-1}$\newline
+So $2^{k}+2^{k-1} < 2^{k}+2^{k}$\newline
+We prove that statement is true for any k$\square$
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3: Part b
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part b}
+
+Use induction to show that $a_{3n}\in\mathbb{E}$ for $n\geq 0$.\newline
+
+{\noindent\bf Answer:}
+{
+ \newline
+Base Case: $n=1$, $a_{3}\in\mathbb{E}$ because $a_{3}=a_{2}+a_{1}=2$ it is true\newline
+Inductive Step: Choose $k \in Z$ s.t $a_{3k}\in\mathbb{E}$\newline
+Observe that $a_{3(k+1)}=a_{3k+1}+a_{3k+2}=$\newline
+$=a_{3k-1}+a_{3k}+a_{3k}+a_{3k+1}=$\newline
+$=a_{3k-1}+2a_{3k}+a_{3k-1}+a_{3k}=$\newline
+$=2a_{3k-1}+2a_{3k}$\newline
+We see that $a_{3(k+1)}=2(a_{3k-1}+a_{3k})$
+Then $a_{3(k+1)}$ is even\newline
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3: Part c
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part c}
+
+Use induction to show that $a_{3n+1}\in\mathbb{O}$ for $n\geq 0$.\newline
+
+{\noindent\bf Answer:}
+{
+ \newline
+Base case: n=1, $a_{4}=a_{3}+a_{2}=2+1=3$ 3 is in O\newline
+Inductive Step: Choose $k \in Z$ s.t $a_{3k+1}\in\mathbb{O}$\newline
+Observe that $a_{3(k+1)+1}=a_{3(k+1)}+a_{3k+2}=$\newline
+$=a_{3k+3}+a_{3k+2}=a_{3k+1}+a_{3k+2}+a_{3k}+a_{3k+1}=$\newline
+$=2a_{3k+1}+a_{3k+1}+a_{3k}+a_{3k}=3a_{3k+1}+2a_{3k}$\newline
+We can see that $a_{3(k+1)+1} \in O$
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3: Part d
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part d}
+
+Use parts b) and c) to show that $a_{3n+2}\in\mathbb{O}$ for $n\geq 0$.\newline
+{\noindent\bf Answer:}
+{
+Proof: From part a and part b we know that $a_{3n+1}\in\mathbb{O}$ and $a_{3n}\in\mathbb{E}$\newline
+Observe that $a_{3n+2}= a_{3n+1}+a_{3n}$\newline
+Sum of odd and even number is always odd\newline
+}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 4}
+
+Let $\mathbb{U}$ be the universe of elements being considered. Let $I$ be some set and for each $i\in I$, $S_{i}\subseteq\mathbb{U}$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #4: Part a
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part a}
+Prove that
+\[
+\left(\bigcup_{i\in I}S_{i}\right)^{c}=\bigcap_{i\in I}S_{i}^{c}
+\]
+{\noindent\bf Answer:}
+{
+\newline
+First, we need to prove LHS is subset of RHS\newline
+Second, we need to prove RHS is subset of LHs\newline
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #4: Part b
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part b}
+Prove that
+\[
+\left(\bigcap_{i\in I}S_{i}\right)^{c}=\bigcup_{i\in I}S_{i}^{c}
+\]
+{\noindent\bf Answer:}
+{
+ \newline
+First, we need to prove LHS is subset of RHS\newline
+Second, we need to prove RHS is subset of LHs\newline
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #4: Part c
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part c}
+
+Why can't you use induction in the previous parts?\\
+
+{\noindent\bf Answer:}
+{
+ \newline
+Induction only guarantees that P(n) is true for all n in N , and infinity is not included in it.
+The unions above might be uncountable\newline
+}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 5}
+
+Do problem 8 from section 3.2 of the course reader.\\
+
+{\noindent\bf Answer:}
+{
+ \newline
+$C(Z*Z)=C(Z)=\eta$\newline
+Example: function $f(x,y)=((x+y)(x+y+1))/2+y, x+y=n$\newline
+This function is one to one\newline
+Proof:\newline
+A function $f:Z*Z \rightarrow Z*Z$ is 1:1 when $f(a,b)=f(c,d)$ where $a=c,b=d$\newline
+Observe that $\binom{x+y+1}{2} \leq f(x,y) \leq \binom{x+y+2}{2}$\newline
+$f(x_{1},y_{1}) \neq f(x_{2},y_{2})$for $x_{1}+y_{1} \neq x_{2}+y_{2}$\newline
+$x_{1}+y_{1} = x_{2}+y_{2}$ with $y_{1} \neq y_{2}$ then\newline
+$f(x_{1},y_{1})-f(x_{2},y_{2})=y_{1} - y_{2} \neq 0$\newline
+Thus the function is 1:1
+}
+\end{document}

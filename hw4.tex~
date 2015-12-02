@@ -1,0 +1,315 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%DOCUMENT SETTINGS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,epsfig}
+
+\evensidemargin 0in
+\oddsidemargin 0in
+\topmargin -.3in
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.5in}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}{\underline}
+\newcommand{\vs}{\vspace{3mm}}
+\newcommand{\cF}{{\mathcal F}}
+
+\newcounter{inner}
+
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\bx}[1]{\makebox(8,5.5)[c]{#1}}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{claim}{Claim}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%HEADER
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\hrule
+\vskip .2in
+\centerline{\bf \Large 21-127-T: Concepts of Mathematics}
+\centerline{\bf Homework 3}
+{\bf Due date: 6/12/2015, 11:59 PM}
+\vskip .2in
+\hrule
+\end{center}
+\thispagestyle{empty}
+{\bf \noindent Name:Dina Yerlan \newline Collaborators:}
+\vspace {0.2in}
+\hrule
+\vspace {0.2in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%HOMEWORK BODY
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #1: Part a
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part a}
+
+Prove that a composition of bijections is bijective.\\
+
+{\noindent\bf Answer:}
+{
+Proof: Let $f:Y \rightarrow Z$and $g:Z  \rightarrow Y$ be our bijective functions\newline
+To prove $f \circ g$ is bijective, we need to prove that it is both injective and surjective.\newline
+First,let's prove that $f\circ g$ is injective\newline
+Choose $x_{0}$,$y_{0}$,$c \in Y$  s.t  $f\circ g(x_{0})= g\circ f(y_{0})=c$\newline
+This means that $g(f(x))=g(f(y))$\newline
+Let $f(x)=a,f(y)=b$ so $g(a)=g(b)$\newline
+Since $g: Z  \rightarrow Y$ is injective and $g(a)=g(b)$, we know that $a=b$\newline
+This means that $f(x_{0})=f(y_{0})$\newline
+Since $f:Y  \rightarrow Z$ is injective and $f(x_{0})=f(y_{0})$, we know that $x_{0}=y_{0}$\newline
+Thus we have shown that if $f \circ g(x)= g \circ f(y)$, $x=y$\newline
+So, $f\circ g$ is injective.\newline
+ \newline
+Second, we need to prove $f\circ g$ is surjective\newline
+Choose $y  \in Y$ \newline
+Since $g: Z-Y$ is surjective, $\exists z \in Z $ s.t $g(z)=y$\newline
+Since $f:Y-Z$ is surjective,$\exists x \in X $ s.t $f(x)=z$\newline
+So, $ g \circ f(x)= g(f(x))=g(z)=y$\newline
+Thus $f\circ g$ is surjective\newline
+We proved that  $f\circ g$ is injective and surjective, so it is bijective $\square$\newline
+ \newline
+ \newline
+ \newline
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #1: Part bPPPPP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part b}
+
+Prove that a function has an inverse iff it's bijective.\\
+
+{\noindent\bf Answer:}
+{
+ \newline
+Proof:
+Let function be $f:A \rightarrow B$\newline
+First, we need to prove if f has inverse then it is bijection\newline
+Suppose $f$ has an inverse $g=f^-1$\newline
+$\forall x \in B$ $\exists y$ s.t $y=f(x)$\newline
+Now $f(y)=f(g(x))=x$ so f is surjective by definition of surjection\newline
+$f(a)=f(b)$, applying $g$ on both sides we have $g(f(a))=g(f(b))$ so $a=b$\newline
+So $f$ is injective by definition of injection\newline
+$f$ is both injective and surjective so it must be bijective\newline
+ \newline
+Second, we need to prove that if  $f$ is a bijection then it has an inverse\newline
+Suppose $f$ is bijective\newline
+By definition, given $x \in B$ and $y \in A$ with $f(y)=x$\newline
+Since $f$ is injective, there is only one $y$\newline
+Let $g(x)=y$\newline
+Now $\forall y, g(f(y)=y$ and  $\forall x, g(f(x)=x$ so $g$ is inverse of $f$\newline
+Thus if $f$ is bijective then it has inverse\newline
+Conclusion: We proved that  if f has inverse then it is bijection and if $f$ is bijective then it has inverse.$\square$\newline
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #1: Part c
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part c}
+
+Let $R,S,T$ be sets. We say that $\vert S\vert=\vert T\vert$ if there's a bijection between S and T. We remarked that ``='' works a bit differently for sets; namely, we must prove facts like $\vert S\vert=\vert T\vert$ implies $\vert T\vert=\vert S\vert$. You'll prove more. Prove that:
+\begin{itemize}
+  \item (Reflexivity): $\vert S\vert=\vert S\vert$
+    \item (Symmetry): $\vert S\vert=\vert T\vert$ implies $\vert T\vert=\vert S\vert$
+      \item (Transitivity): $\vert S\vert=\vert T\vert$ and $\vert T\vert=\vert R\vert$ implies $\vert S\vert=\vert R\vert$
+\end{itemize}
+We say that ``='' is an equivalence relation. We'll cover these in greater detail later. (HINT: Use the previous two parts.)\\
+
+{\noindent\bf Answer:}
+{
+Proof(Reflexivity): We want to show that $\vert S\vert=\vert S\vert$\newline
+The $\vert S\vert \cap  \vert S\vert = \phi $\newline
+$\vert S\vert \subseteq  \vert S\vert $ and $\vert S\vert \supseteq  \vert S\vert $\newline
+$\forall x \in S$\newline
+$x \in S \rightarrow x \in S$\newline
+$\forall a : a \in S \rightarrow a \in S$\newline
+Thus $\vert S\vert=\vert S\vert$\newline
+ \newline
+Proof(Symmetry):
+By reflexivity $\vert S\vert=\vert S\vert$ and $\vert T\vert=\vert T\vert$\newline
+$\vert S\vert=\vert T\vert$ then $\vert T\vert=\vert S\vert$ by reflexivity\newline
+ \newline
+Proof(Transitivity):\newline
+By reflexivity,$\vert S\vert=\vert S\vert$ and $\vert T\vert=\vert T\vert$ and $\vert R\vert=\vert R\vert$\newline
+By symmetry, if $\vert S\vert=\vert T\vert$ then $\vert T\vert=\vert S\vert$\newline
+Again by symmetry, $\vert T\vert=\vert R\vert$ and $\vert R\vert=\vert T\vert$\newline
+Then $\vert T\vert=\vert S\vert$\newline
+Then $\vert R\vert=\vert S\vert$ imples $\vert S\vert=\vert R\vert$ $\square$\newline
+
+}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 2}
+
+Do problem 6 on page 94.\\
+
+{\noindent\bf Answer:}
+{
+ \newline
+Let $f:Z \rightarrow Z^+$ defined by $f(x)=\vert x\vert$\newline
+We see that function takes any integer and produces positive integers\newline
+The function is one-to-one:\newline
+Suppose $\forall x,y \in Z$ s.t $f(x)=f(y)$ \newline
+Then we have $x=x$, and hence $x=y$\newline
+The function is onto:\newline
+Given any $x \in Z$ is also in $Z$ and $f(x-0)=(x-0)+0=x$\newline
+Thus the function is injective and surjective $\square$
+}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 3}
+
+Let $n,m,k\in\mathbb{N}$. Prove the following claims:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3: Part a
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part a}
+
+$2^{n}=\sum_{i=0}^{n}\binom{n}{i}$\\
+
+{\noindent\bf Answer:}
+{
+ \newline
+Base Case:$\binom{0}{0}=1$ holds by definition.\newline
+\newline
+Induction Hypothesis: $\sum_{i=0}^{k}\binom{k}{i}=2^{k}$\newline
+If $P(k)$ is true , where $k \geq 1$, then $P(k+1)$ is true.\newline
+ \newline
+Induction Step:
+By strong induction, choose $k$ s.t $\sum_{i=0}^{k}\binom{k}{i}=2^{k}$ is true\newline
+ $\sum_{i=0}^{k+1}\binom{k+1}{i}=\binom{k+1}{0}+\sum_{i=1}^{k}\binom{k+1}{i}+\binom{k+1}{k+1}$\newline
+$= \binom{k+1}{0}+\sum_{i=1}^{k}\binom{k+1}{i-1} + \sum_{i=1}^{k}\binom{k}{i}+\binom{k+1}{k+1}$\newline
+$=\sum_{i=0}^{k-1}\binom{k}{i}+\sum_{i=0}^{k-1}\binom{k+1}{k+1}+ \binom{k+1}{0}+\sum_{i=1}^{k}\binom{k}{i}$\newline
+$==\sum_{i=0}^{k-1}\binom{k}{i}+\sum_{i=0}^{k-1}\binom{k}{k}+ \binom{k}{0}+\sum_{i=1}^{k}\binom{k}{i}$\newline
+$==\sum_{i=0}^{k}\binom{k}{i}+\sum_{i=0}^{k}\binom{k}{i}$
+$=2^{k}+2^{k}$
+$=2*2^{k}=2^{k+1}$\newline
+So $  P(k) \rightarrow P(k+1) \square$
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3: Part b
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part b}
+
+If $n\geq 1$ then $n2^{n-1}=\sum_{i=0}^{n}i\binom{n}{i}$\\
+
+{\noindent\bf Answer:}
+{
+Proof:\newline
+We used strong induction to prove $2^{n}=\sum_{i=0}^{n}\binom{n}{i}$ \newline
+Using that we see that: \newline
+$\sum_{i=0}^{n}i\binom{n}{i}=\sum_{i=1}^{n}i\binom{n}{i}$, as $0\binom{n}{0}=0$\newline
+$=\sum_{i=1}^{n}n\binom{n-1}{i-1}$ by factoring binomial coefficients\newline
+$=\sum_{i=0}^{n-1}n\binom{n-1}{i}$ by taking out 1 index\newline
+$=n2^{n-1}$ \newline
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #3: Part c
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part c}
+
+$\sum_{i=0}^{n}\binom{i}{k}=\binom{n+1}{k+1}$\\
+
+{\noindent\bf Answer:}
+{
+Proof:\newline
+Since we used strong induction to prove binomial coefficients in part a, we can use properties of binomial coefficients to prove this statement\newline
+Observe that:\newline
+$\sum_{i=0}^{n}\binom{i}{k}=\sum_{i=0}^{n}\binom{k+i}{k}$\newline
+$=\sum_{i=-k}^{0}\binom{k+i}{k}+\sum_{i=0}^{n-k}\binom{k+i}{k}$\newline
+$=0+\sum_{i=0}^{n-k}\binom{k+i}{k} =\binom{k+n-k+1}{k+1}$\newline
+$=\binom{0+n+1}{k+1}=\binom{n+1}{k+1} \square $\newline
+}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 4}
+
+Let $S\subseteq\mathbb{R}$ s.t. $S$ contains an open interval, i.e. $\exists a,b\in\mathbb{R}$ s.t. $a<b$ and $(a,b):=\{x\in\mathbb{R}:a<x<b\}\subseteq S$. Prove that $\vert S\vert=\vert\mathbb{R}\vert$.\\
+
+{\noindent\bf Answer:}
+{
+Proof: First, notice that the open interval $(-n\pi,n\pi)$ has the same cardinality as real number line\newline
+Lets counstruct a bijection $f:(-n\pi,n\pi) \rightarrow R$, so let $f(x)=sin(x)$\newline
+In question 1 we proved that if a function has an inverse then it is bijective\newline
+$f^{-1}(x)=arcsin(x)$ so $f$ must be bijective\newline
+Now I have to show that $(a,b)$ and  $(-n\pi,n\pi)$ have the same cardinality\newline
+Define $g:(a,b)$$\rightarrow (-n \pi,n\pi)$ by letting $g(x)=\pi x$ we see that when $a<x<b$ the function produces outputs in $a\pi<x<b\pi$ which is essentially in  $(-n\pi,n\pi)$ \newline
+To show that $g$ is bijective, we have to find its inverse\newline
+$g^{-1}(x)=x/\pi$ by inverse formula\newline
+$g(g^{-1}(x))=g(x/(\pi))=(\pi*x)/(\pi)=x$, we showed inverse exists\newline
+The funtion $g$ has an inverse thus it is bijective(proved in question 1)\newline
+That means $(a,b)$ and  $(n\pi,n\pi)$ have the same cardinality,and  $(-n\pi,n\pi)$ has the same cardinality as real\
+ number line, by transitivity(proved in question 2) $(a,b)$ have the same cardinality as $R$\newline
+Thus $\vert S\vert=\\vert\mathbb{R}\vert$ $\square$
+
+}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Question #5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 5}
+
+NOTE: THIS PROBLEM IS CHALLENGING!\\
+
+{\noindent\it Recall:} The Pigeonhole Principle: If $k,n\in\mathbb{N}$ and we place more than
+kn objects into n boxes, then one of these boxes MUST have more than k elements.
+
+\begin{claim}
+Suppose we pick n+1 numbers from the set $\{1,...,2n\}$. Prove that the set of n+1 numbers contains a pair of numbers s.t. one is a multiple of the other.
+\end{claim}
+\noindent (HINT: Write each number in the form $2^{k}m$ with $m\in\mathbb{O}$. Study occurences of values of m using the Pigeonhole Principle.)\\
+
+{\noindent\bf Answer:}
+{
+Let ${p_{1},p_{2},...p_{n}}$ be integers from set  $\{1,...,2n\}$.\newline
+Let $p_{i}=2^{k}m=2^{k}(2m_{i}+1)$ where $1<k<n+1$ and $1<i<n+1$, observe that $2m+1 \in\mathbb{O}$\newline
+Since elements $ p_{i}$ are from set $\{1,...,2n\}$, then for $2m+1 \in O$ we can write   $2m+1$ as set $\{1,3,5,..2n-1\}$\newline
+By pigeonhole principle  $\exists i, j,i \neq j$ where $ 1<i<n+1$ and $1<j<n+1$ s.t $2m_{i}+1=2m_{j}+1$\newline
+By division rule, $p_{i}\mid p_{j}$ and $p_{j}\mid p_{i}$\newline
+Thus one of them must be multiple of another.$\square$
+
+
+}
+
+
+
+
+\end{document}
